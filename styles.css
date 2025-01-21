@@ -587,3 +587,29 @@ certification-card .view-credential {
         padding: 1rem;
     }
 }
+.animated-bio {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4);
+}
+
+/* Typewriter Effect */
+.title {
+    display: inline-block;
+    font-size: 1.5em;
+    color: #7e2ca4;
+    white-space: nowrap;
+    opacity: 0; /* Initially invisible */
+    animation: fadeIn 10s forwards; /* Fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with invisible text */
+    }
+    to {
+        opacity: 1; /* End with fully visible text */
+    }
+}
+
