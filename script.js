@@ -100,6 +100,15 @@ const projects = [
         ]
     },
     {
+        title: "TRINETRA: AI-Powered Currency Recognition App for the Visually Impaired in India",
+        date: "Aug 2024",
+        points: [
+            "AI-based app that help visually impaired Indian User to accurately identify Indian currency.",
+            "Trained an MobileNet V2 Model for currency recogenization and used canny edge algorithm to extract features from Currency ",
+            "Created custom Dataset of Real and Fake currency."
+        ]
+    },
+    {
         title: "Face Recognition Attendance Management System",
         date: "April 2022",
         points: [
