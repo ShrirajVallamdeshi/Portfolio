@@ -6,15 +6,15 @@
     <title>Shriraj Vallamdeshi - Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-27JBDBHF3M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-27JBDBHF3M');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27JBDBHF3M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-27JBDBHF3M');
+    </script>
 </head>
 <body>
     <div class="container">
@@ -32,34 +32,27 @@
                     <h1 class="gradient-text">Shriraj Vallamdeshi</h1>
                     <p class="title">AI & Data Science Engineer</p>
                 </div>
-                
+
                 <!-- Contact Links -->
                 <div class="contact-links">
-                    <!-- Email Link -->
                     <a href="mailto:shrirajvallamdeshi@gmail.com" class="contact-btn cyan-border">
                         <i data-lucide="mail"></i>
                         <span>Email</span>
                     </a>
-                
-                    <!-- LinkedIn Link (replace with your LinkedIn profile URL) -->
                     <a href="https://www.linkedin.com/in/shriraj-vallamdeshi-b4743323b/" target="_blank" class="contact-btn blue-border">
                         <i data-lucide="linkedin"></i>
                         <span>LinkedIn</span>
                     </a>
-                    
-                    <!-- GitHub Link (replace with your GitHub profile URL) -->
                     <a href="https://github.com/ShrirajVallamdeshi" target="_blank" class="contact-btn purple-border">
                         <i data-lucide="github"></i>
                         <span>GitHub</span>
                     </a>
-                
-                    <!-- Resume Link (replace with your resume URL or file path) -->
                     <a href="https://drive.google.com/file/d/1q6zkkEyWhACB2QKPpQxT4fzIIvM50AbG/view?usp=sharing" target="_blank" class="contact-btn blue-border">
-                        <i data-lucide="file-text"></i> <!-- Changed to "file-text" for Resume icon -->
+                        <i data-lucide="file-text"></i>
                         <span>Resume</span>
                     </a>
                 </div>
-                
+
                 <!-- Bio -->
                 <p class="bio">
                     Enthusiastic AI and Data Science Engineering student with a passion for developing innovative AI solutions. 
@@ -87,20 +80,13 @@
                         <h2>Technical Skills</h2>
                     </div>
                     <div class="skills-container">
-                        <!-- Programming Languages -->
                         <div class="skill-category">
                             <h3>Programming Languages</h3>
-                            <div class="skills-grid" id="programming-skills">
-                                <!-- Skills will be populated via JavaScript -->
-                            </div>
+                            <div class="skills-grid" id="programming-skills"></div>
                         </div>
-                        
-                        <!-- Tools & Frameworks -->
                         <div class="skill-category">
                             <h3>Tools & Frameworks</h3>
-                            <div class="skills-grid" id="tools-frameworks">
-                                <!-- Tools will be populated via JavaScript -->
-                            </div>
+                            <div class="skills-grid" id="tools-frameworks"></div>
                         </div>
                     </div>
                 </section>
@@ -111,9 +97,7 @@
                         <i data-lucide="award"></i>
                         <h2>Achievements</h2>
                     </div>
-                    <div class="achievements-container" id="achievements-container">
-                        <!-- Content will be populated by JavaScript -->
-                    </div>
+                    <div class="achievements-container" id="achievements-container"></div>
                 </section>
 
                 <!-- Education Section -->
@@ -133,12 +117,39 @@
                             <p class="education-period">Grade 12 | 2019-2021</p>
                             <p class="education-grade">Percentage: 78.80%</p>
                         </div>
-                    
                     </div>
                 </section>
+
+                <!-- Experience Section -->
+                <section id="experience">
+                    <div class="section-header">
+                        <i data-lucide="briefcase"></i>
+                        <h2>Experience</h2>
+                    </div>
+                    <div class="experience-container">
+                        <div class="experience-card">
+                            <h3>AI Intern – XYZ Tech Solutions</h3>
+                            <p class="experience-period">Jan 2024 – May 2024</p>
+                            <ul class="experience-details">
+                                <li>Worked on developing an AI-powered chatbot using NLP techniques with Python and TensorFlow.</li>
+                                <li>Improved chatbot response accuracy by 25% by implementing transformer-based models.</li>
+                                <li>Collaborated in a 4-member team using Git and Agile development practices.</li>
+                            </ul>
+                        </div>
+                        <div class="experience-card">
+                            <h3>Data Analyst Intern – DataSolve Pvt. Ltd.</h3>
+                            <p class="experience-period">June 2023 – Aug 2023</p>
+                            <ul class="experience-details">
+                                <li>Cleaned and analyzed large datasets using Pandas, NumPy, and Excel.</li>
+                                <li>Created insightful dashboards using Power BI to support business decisions.</li>
+                                <li>Reduced data processing time by 30% through efficient scripting.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Certifications Section -->
                 <section id="certifications">
-                   
                     <div class="section-header">
                         <i data-lucide="award"></i>
                         <h2>Certifications</h2>
@@ -147,6 +158,9 @@
                         <!-- Certifications will be populated via JavaScript -->
                     </div>
                 </section>
+            </main>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
