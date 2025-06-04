@@ -125,7 +125,7 @@ header {
 }
 
 .bio {
-    max-width: 36rem;
+    max-width: 80rem;
     margin: 0 auto;
     color: #9ca3af;
 }
@@ -159,16 +159,46 @@ section {
     border-radius: 0.75rem;
     transition: all 0.3s ease;
 }
-
+.project-card {
+    background-color: #1b1f48;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #22d3ee;  /* Left border to highlight */
+}
 /* Projects */
 .projects-grid {
     display: grid;
     gap: 2rem;
 }
-
-.project-card {
-    border: 1px solid #164e63;
+@keyframes neon-border-flicker {
+    0% {
+        box-shadow: 0 0 4px 0 #3b82f6, 0 0 16px 0 #3b82f6;
+        border-color: #3b82f6;
+    }
+    20% {
+        box-shadow: 0 0 8px 2px #60a5fa, 0 0 24px 2px #60a5fa;
+        border-color: #60a5fa;
+    }
+    40% {
+        box-shadow: 0 0 12px 4px #818cf8, 0 0 32px 4px #818cf8;
+        border-color: #818cf8;
+    }
+    60% {
+        box-shadow: 0 0 16px 6px #a78bfa, 0 0 40px 6px #a78bfa;
+        border-color: #a78bfa;
+    }
+    80% {
+        box-shadow: 0 0 12px 4px #818cf8, 0 0 32px 4px #818cf8;
+        border-color: #818cf8;
+    }
+    100% {
+        box-shadow: 0 0 4px 0 #3b82f6, 0 0 16px 0 #3b82f6;
+        border-color: #3b82f6;
+    }
 }
+
 
 .project-card:hover {
     border-color: #0891b2;
@@ -190,6 +220,20 @@ section {
 .project-date {
     color: #9ca3af;
 }
+.skill-card {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 12px 0 #3b82f6;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    animation: neon-border-flicker 2s infinite alternate;
+}
+
+@keyframes neon-border-flicker {
+    0% {
+        box-shadow: 0 0 4px 0 #3b82f6, 0 0 16px 0 #3b82f6;
+        border-color: #3b82f6;
+    }
+    
+    }
 
 /* Skills */
 .skills-container {
@@ -227,38 +271,63 @@ section {
     transform: scale(1.1);
 }
 
-/* Certifications */
-.certifications-grid {
+.experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-.certification-card {
-    border: 1px solid #854d0e;
+.experience-card {
+    border: 1px solid #164e63;
 }
 
-.certification-card:hover {
-    border-color: #eab308;
+.experience-card:hover {
+    border-color: #0891b2;
 }
-certification-card .view-credential {
-    color: #394772; /* Change the text color to orange, adjust as needed */
-    text-decoration: none; /* Optionally remove underline */
+.experience-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.experience-card {
+    background-color: #1b1f48;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #22d3ee;  /* Left border to highlight */
 }
 
-.certification-card .view-credential:hover {
-    color: #eab308; /* Change color on hover */
-    text-decoration: underline; /* Optional underline on hover */
-}
-.certification-card .view-credential-link {
-    color: #a64b16; /* Set text color, you can choose any color */
-    text-decoration: none; /* Remove underline */
+.experience-company {
+    font-size: 1rem;
+    color: #777;
+    display: block;
+    margin-top: 2px;
 }
 
-.certification-card .view-credential-link:hover {
-    color: #eab308; /* Change color on hover (can be yellow for effect) */
-    text-decoration: underline; /* Optional, add underline on hover */
+.experience-date {
+    font-size: 1rem;
+    color: #aaa;
+    display: block;
+    margin-top: 2px;
 }
+
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.experience-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #22d3ee;
+}
+
+.experience-date {
+    color: #9ca3af;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -376,7 +445,77 @@ certification-card .view-credential {
 .achievement-card:hover .achievement-image {
     transform: scale(1.05);
 }
+/* Certifications Section - Styled like Education */
+.certifications-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
+.certification-card {
+    background-color: #1b1f48;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #eab308; /* Highlight with yellow */
+    border: none;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left-color: #facc15;
+}
+
+.certification-card .certification-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #eab308;
+    margin-bottom: 0.5rem;
+}
+
+.certification-card .certification-issuer {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fbbf24;
+    margin-bottom: 0.75rem;
+}
+
+.certification-card .certification-date {
+    font-size: 0.875rem;
+    color: #0b56d7;
+    margin-top: 1rem;
+}
+
+.certification-card .achievement-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    color: #eab308;
+}
+
+.certification-card .view-credential-link {
+    color: #eab308;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.certification-card {
+    background-color: #1b1f48;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #8b5cf6;  /* Left border to highlight */
+}
+
+.certification-card .view-credential-link:hover {
+    color: #facc15;
+    text-decoration: underline;
+}
 /* Overlay for Title and Description */
 .achievement-overlay {
     position: absolute;
@@ -493,7 +632,7 @@ certification-card .view-credential {
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    color: #4b5563;
+    color: #ffffff;
     margin-bottom: 1.5rem;
 }
 
@@ -542,7 +681,7 @@ certification-card .view-credential {
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 0.5rem;
-    color: #8b5cf6;
+    color: #ffffff;
 }
 
 /* Education Timeline - If using a timeline format */
@@ -588,9 +727,9 @@ certification-card .view-credential {
     }
 }
 .animated-bio {
-    font-size: 1.5em;
-    color: #fff;
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4);
+    font-size: 1.2em;
+    color: #22d3ee;
+    text-shadow: 0 0 2px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4);
 }
 
 /* Typewriter Effect */
@@ -612,4 +751,3 @@ certification-card .view-credential {
         opacity: 1; /* End with fully visible text */
     }
 }
-
