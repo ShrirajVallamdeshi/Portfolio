@@ -80,6 +80,18 @@ const toolsFrameworks = [
         logo: 'https://cdn.worldvectorlogo.com/logos/tableau-software.svg'
     }
 ];
+const experience = [
+    {
+        company: "Rudra Research & Analytics",
+        title: "Rudra Research & Analytics - AI & ML Intern",
+        date: "Feb 2025 - May 2025",
+        points: [
+            "Working on Computer Vision and Deep Learning algorithm’s for efficiency Extracting Data from Blurred Image’s.",
+            "Trained a BiLSTM-based name classification model on categorical data, achieving 89% accuracy.",
+            "Cleaned dataset containing more than 100k+ rows and tried to find useful insights implemented a pipeline for accurate data extraction and optimized storage. ",
+        ]
+    }
+];
 const projects = [
     {
         title: "Rooftop Solar Potential Mapping Using Deep Learning",
@@ -100,15 +112,6 @@ const projects = [
         ]
     },
     {
-        title: "TRINETRA: AI-Powered Currency Recognition App for the Visually Impaired in India",
-        date: "Aug 2024",
-        points: [
-            "AI-based app that help visually impaired Indian User to accurately identify Indian currency.",
-            "Trained an MobileNet V2 Model for currency recogenization and used canny edge algorithm to extract features from Currency ",
-            "Created custom Dataset of Real and Fake currency."
-        ]
-    },
-    {
         title: "Face Recognition Attendance Management System",
         date: "April 2022",
         points: [
@@ -118,6 +121,8 @@ const projects = [
         ]
     }
 ];
+
+
 
 const certifications = [
     {
@@ -225,6 +230,37 @@ function populateToolsFrameworks() {
     });
 }
 
+// ✅ Updated populateExperience function to include company
+function populateExperience() {
+    const container = document.getElementById('experience-container');
+    experience.forEach(exp => {
+        const card = document.createElement('div');
+        card.className = 'experience-card card';
+
+        const header = document.createElement('div');
+        header.className = 'experience-header';
+
+        header.innerHTML = `
+            <h3 class="experience-title">${exp.title}</h3>
+            <span class="experience-company">${exp.company}</span>
+            <span class="experience-date">${exp.date}</span>
+        `;
+
+        const pointsList = document.createElement('ul');
+        pointsList.className = 'experience-points';
+
+        exp.points.forEach(point => {
+            const listItem = document.createElement('li');
+            listItem.className = 'experience-point';
+            listItem.innerHTML = `<div class="point-bullet"></div><span>${point}</span>`;
+            pointsList.appendChild(listItem);
+        });
+
+        card.appendChild(header);
+        card.appendChild(pointsList);
+        container.appendChild(card);
+    });
+}
 
 // Populate Projects
 function populateProjects() {
@@ -251,6 +287,27 @@ function populateProjects() {
         projectCard.appendChild(header);
         projectCard.appendChild(pointsList);
         container.appendChild(projectCard);
+    });
+}
+
+// ✅ Populate Experience (fixed version)
+function populateExperience() {
+    const container = document.getElementById('experience-container');
+    experience.forEach(exp => {
+        const card = createElement('div', 'experience-card card');
+        const header = createElement('div', 'experience-header');
+        header.innerHTML = `<h3 class="experience-title">${exp.title}</h3><span class="experience-date">${exp.date}</span>`;
+
+        const pointsList = createElement('ul', 'experience-points');
+        exp.points.forEach(point => {
+            const listItem = createElement('li', 'experience-point');
+            listItem.innerHTML = `<div class="point-bullet"></div><span>${point}</span>`;
+            pointsList.appendChild(listItem);
+        });
+
+        card.appendChild(header);
+        card.appendChild(pointsList);
+        container.appendChild(card);
     });
 }
 
@@ -384,6 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
     populateProjects();
     populateCertifications();
     populateAchievements();
+    populateExperience();
     addScrollAnimation();
     addHoverEffects();
     initializeThemeToggle();
